@@ -93,9 +93,68 @@
                 Console.WriteLine("Error Input,Please Repeat!!!");
             }*/
 
+
             //Console Calculator
+            //Enter Number 1
+            double num1;
+            while (true)
+            {
+                Console.Write("num1: ");
+                string num1Input = Console.ReadLine();
+                if (double.TryParse(num1Input, out num1))
+                    break;
 
+                Console.WriteLine("Error input.Try again!!!");
+            }
 
+            //Enter Number 2
+            double num2;
+            while (true)
+            {
+                Console.Write("num2: ");
+                string num2Input = Console.ReadLine();
+                if (double.TryParse(num2Input, out num2))
+                    break;
+
+                Console.WriteLine("Error input.Try again!!!");
+            }
+
+            //Operator
+            Console.Write("Operator(+,-,*,/): ");
+            string userOper = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(userOper))
+            {
+                Console.WriteLine("Error Operator!");
+                return;
+            }
+            char userOperator = userOper[0];
+
+            double sum=0;
+            switch (userOperator)
+            {
+                case '+':
+                    sum = num1 + num2;
+                    break;
+                case '-':
+                    sum = num1 - num2;
+                    break;
+                case '*':
+                    sum = num1 * num2;
+                    break;
+                case '/':
+                    if(num2 == 0)
+                    {
+                        Console.WriteLine("Error division to 0.");
+                        return;
+                    }
+                    sum = num1 / num2;
+                    break;
+                default:
+                    Console.WriteLine("Error");
+                    return;
+            }
+            Console.WriteLine($"{num1} {userOperator} {num2} = {sum}");
 
         }
     }
