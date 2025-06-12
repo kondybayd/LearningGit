@@ -17,5 +17,6 @@ Simple console app for basic math operations: addition, subtraction, multiplicat
 - .NET 8
 - Console Application
 
-##Author
-[kondybayd@gmail.com](https://github.com/kondybayd) 
+## Author
+[kondybayd](https://github.com/kondybayd)  
+📧 [kondybayd@gmail.com](mailto:kondybayd@gmail.com)
