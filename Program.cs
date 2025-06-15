@@ -96,68 +96,150 @@
 
             //Console Calculator
             //Enter Number 1
-            double num1;
-            while (true)
-            {
-                Console.Write("num1: ");
-                string num1Input = Console.ReadLine();
-                if (double.TryParse(num1Input, out num1))
-                    break;
+            /* double num1;
+             while (true)
+             {
+                 Console.Write("num1: ");
+                 string num1Input = Console.ReadLine();
+                 if (double.TryParse(num1Input, out num1))
+                     break;
 
-                Console.WriteLine("Error input.Try again!!!");
-            }
+                 Console.WriteLine("Error input.Try again!!!");
+             }
 
-            //Enter Number 2
-            double num2;
-            while (true)
-            {
-                Console.Write("num2: ");
-                string num2Input = Console.ReadLine();
-                if (double.TryParse(num2Input, out num2))
-                    break;
+             //Enter Number 2
+             double num2;
+             while (true)
+             {
+                 Console.Write("num2: ");
+                 string num2Input = Console.ReadLine();
+                 if (double.TryParse(num2Input, out num2))
+                     break;
 
-                Console.WriteLine("Error input.Try again!!!");
-            }
+                 Console.WriteLine("Error input.Try again!!!");
+             }
 
-            //Operator
-            Console.Write("Operator(+,-,*,/): ");
-            string userOper = Console.ReadLine();
+             //Operator
+             Console.Write("Operator(+,-,*,/): ");
+             string userOper = Console.ReadLine();
 
-            if (string.IsNullOrWhiteSpace(userOper))
-            {
-                Console.WriteLine("Error Operator!");
-                return;
-            }
-            char userOperator = userOper[0];
+             if (string.IsNullOrWhiteSpace(userOper))
+             {
+                 Console.WriteLine("Error Operator!");
+                 return;
+             }
+             char userOperator = userOper[0];
 
-            double sum=0;
-            switch (userOperator)
+             double sum=0;
+             switch (userOperator)
+             {
+                 case '+':
+                     sum = num1 + num2;
+                     break;
+                 case '-':
+                     sum = num1 - num2;
+                     break;
+                 case '*':
+                     sum = num1 * num2;
+                     break;
+                 case '/':
+                     if(num2 == 0)
+                     {
+                         Console.WriteLine("Error division to 0.");
+                         return;
+                     }
+                     sum = num1 / num2;
+                     break;
+                 default:
+                     Console.WriteLine("Error");
+                     return;
+             }
+             Console.WriteLine($"{num1} {userOperator} {num2} = {sum}");*/
+
+
+            //Methods 
+
+            /*SayHello();
+            int a = SumOfTwoNum(15, 25);
+            Console.WriteLine(a);
+            SayHelloTo("Duman");
+            int n = Square(3);
+            Console.WriteLine(n);
+            double num = Calculator(15, 7, '+');
+            Console.WriteLine(num);
+            double num2 = Calculator(15, 0, '/');
+            Console.WriteLine(num2);
+        }
+
+        //Simple Method to Say Hello!
+        static void SayHello()
+        {
+            Console.WriteLine("Hello World!");
+        }
+
+        //Sum of two numbers
+        static int SumOfTwoNum(int a, int b)
+        {
+            int sum = a + b;
+            return sum;
+        }
+
+        //Hello with name
+        static void SayHelloTo(string s)
+        {
+            Console.WriteLine($"Hello {s}");
+        }
+
+        //Square of number
+        static int Square(int a)
+        {
+            return a * a;
+        }
+
+
+        //Simple Calculator with methods
+        static double Calculator(double a, double b, char oper)
+        {
+            switch (oper)
             {
                 case '+':
-                    sum = num1 + num2;
-                    break;
+                    return a + b;
                 case '-':
-                    sum = num1 - num2;
-                    break;
+                    return a - b;
                 case '*':
-                    sum = num1 * num2;
-                    break;
+                    return a * b;
                 case '/':
-                    if(num2 == 0)
+                    if (b == 0)
                     {
-                        Console.WriteLine("Error division to 0.");
-                        return;
+                        Console.WriteLine("Error division to 0");
+                        return 0;
                     }
-                    sum = num1 / num2;
-                    break;
+                    return a / b;
                 default:
-                    Console.WriteLine("Error");
-                    return;
+                    Console.WriteLine("Error Input");
+                    return 0;
+            }*/
+
+
+            //String
+            string name = "Duman";
+            Console.WriteLine(name);
+
+
+            //Initials
+            string fullName = "Duman Kondybay";
+            string[] parts = fullName.Split(' ');
+            string initials = $"{parts[0][0]}.{parts[1][0]}.";
+            Console.WriteLine($"Intials {fullName}: {initials}");
+
+            //Vowels
+            string text = "Hello world";
+            int count = 0;
+            foreach (char c in text.ToLower())
+            {
+                if ("aeiouаеёиоуыэюя".Contains(c)) count++;
             }
-            Console.WriteLine($"{num1} {userOperator} {num2} = {sum}");
-
-            //New branch
-
+            Console.WriteLine($"Vowels in {text}: {count}");
         }
     }
 }
