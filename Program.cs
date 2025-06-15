@@ -7,7 +7,7 @@
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.InputEncoding = System.Text.Encoding.UTF8;
 
-            // Variable Declaration and Initialization
+            /*// Variable Declaration and Initialization
             Console.Write("Name: ");
             string name = Console.ReadLine();
             Console.Write("Age: ");
@@ -123,7 +123,7 @@
                     Console.WriteLine("Error");
                     return;
             }
-            Console.WriteLine($"{a} {userOperator} {b} = {result}");
+            Console.WriteLine($"{a} {userOperator} {b} = {result}");*/
 
             // Strings and Methods
             string nameDemo = "Duman";
@@ -142,6 +142,17 @@
             }
             Console.WriteLine($"Vowels in {text}: {count}");
 
+            string name = Capitalize("duman");
+            Console.WriteLine(name);
+
+            string names = Capitalize("dUmAn");
+            Console.WriteLine(names);
+
+            string initi = GetInitials("Duman Jiao");
+            Console.WriteLine(initi);
+
+            string clean = CleanInput(" aaAsaA  ");
+            Console.WriteLine(clean);
             /*SayHello();
             int sumTwo = SumOfTwoNum(15, 25);
             Console.WriteLine(sumTwo);
@@ -152,6 +163,28 @@
             Console.WriteLine(calcResult);
             double calcZero = Calculator(15, 0, '/');
             Console.WriteLine(calcZero);*/
+        }
+
+        static string CleanInput(string s)
+        {
+            s = s.Trim();
+            s = s.ToLower();
+            return s;
+        }
+        static string GetInitials(string name)
+        {
+           string[] names = name.Split(' ');
+            string initials = $"{names[0][0]}.{names[1][0]}.";
+            return initials;
+
+        }
+        static string Capitalize(string s)
+        {
+            s = s.ToLower();
+            char[] name = s.ToCharArray();
+            name[0] = char.ToUpper(name[0]);
+            return new string(name);
+
         }
 
         /*static void SayHello()
