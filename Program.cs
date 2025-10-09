@@ -7,8 +7,8 @@
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.InputEncoding = System.Text.Encoding.UTF8;
 
-            /*// Variable Declaration and Initialization
-            Console.Write("Name: ");
+            // Variable Declaration and Initialization
+            /*Console.Write("Name: ");
             string name = Console.ReadLine();
             Console.Write("Age: ");
             string ageInput = Console.ReadLine();
@@ -17,6 +17,7 @@
             Console.Write("Is student (true/false): ");
             bool isStudentInput = Convert.ToBoolean(Console.ReadLine());
             Console.WriteLine($"Hi, my name is {name}. I'm {ageInput} years old. My height is {heightInput}. Student: {isStudentInput}");
+
 
             // Arithmetic Operations
             Console.Write("Enter number 1: ");
@@ -29,9 +30,9 @@
             double quotient = (double)num1 / num2;
             double remainder = num1 % num2;
             Console.WriteLine($"Sum: {sum}, Difference: {difference}, Product: {product}, Quotient: {quotient}, Remainder: {remainder}");
-
+*/
             // Conditional Statements
-            Console.Write("Age: ");
+           /* Console.Write("Age: ");
             int age = Convert.ToInt32(Console.ReadLine());
             if (age < 18)
                 Console.WriteLine("You are a minor.");
@@ -81,7 +82,7 @@
                 if (int.TryParse(ageInputTry, out parsedAge))
                     break;
                 Console.WriteLine("Error input. Please repeat!");
-            }
+            }*/
 
             // Console Calculator
             double a, b;
@@ -123,9 +124,9 @@
                     Console.WriteLine("Error");
                     return;
             }
-            Console.WriteLine($"{a} {userOperator} {b} = {result}");*/
+            Console.WriteLine($"{a} {userOperator} {b} = {result}");
 
-            // Strings and Methods
+            /*// Strings and Methods
             string nameDemo = "Duman";
             Console.WriteLine(nameDemo);
 
@@ -165,66 +166,66 @@
             Console.WriteLine(calcZero);*/
         }
 
-        static string CleanInput(string s)
-        {
-            s = s.Trim();
-            s = s.ToLower();
-            return s;
-        }
-        static string GetInitials(string name)
-        {
-           string[] names = name.Split(' ');
-            string initials = $"{names[0][0]}.{names[1][0]}.";
-            return initials;
+        /*  static string CleanInput(string s)
+          {
+              s = s.Trim();
+              s = s.ToLower();
+              return s;
+          }
+          static string GetInitials(string name)
+          {
+             string[] names = name.Split(' ');
+              string initials = $"{names[0][0]}.{names[1][0]}.";
+              return initials;
 
-        }
-        static string Capitalize(string s)
-        {
-            s = s.ToLower();
-            char[] name = s.ToCharArray();
-            name[0] = char.ToUpper(name[0]);
-            return new string(name);
+          }
+          static string Capitalize(string s)
+          {
+              s = s.ToLower();
+              char[] name = s.ToCharArray();
+              name[0] = char.ToUpper(name[0]);
+              return new string(name);
 
-        }
+          }
 
-        /*static void SayHello()
-        {
-            Console.WriteLine("Hello World!");
-        }
+          /*static void SayHello()
+          {
+              Console.WriteLine("Hello World!");
+          }
 
-        static int SumOfTwoNum(int a, int b)
-        {
-            return a + b;
-        }
+          static int SumOfTwoNum(int a, int b)
+          {
+              return a + b;
+          }
 
-        static void SayHelloTo(string s)
-        {
-            Console.WriteLine($"Hello {s}");
-        }
+          static void SayHelloTo(string s)
+          {
+              Console.WriteLine($"Hello {s}");
+          }
 
-        static int Square(int a)
-        {
-            return a * a;
-        }
+          static int Square(int a)
+          {
+              return a * a;
+          }
 
-        static double Calculator(double a, double b, char oper)
-        {
-            switch (oper)
-            {
-                case '+': return a + b;
-                case '-': return a - b;
-                case '*': return a * b;
-                case '/':
-                    if (b == 0)
-                    {
-                        Console.WriteLine("Error division to 0");
-                        return 0;
-                    }
-                    return a / b;
-                default:
-                    Console.WriteLine("Error Input");
-                    return 0;
-            }
-        }*/
+          static double Calculator(double a, double b, char oper)
+          {
+              switch (oper)
+              {
+                  case '+': return a + b;
+                  case '-': return a - b;
+                  case '*': return a * b;
+                  case '/':
+                      if (b == 0)
+                      {
+                          Console.WriteLine("Error division to 0");
+                          return 0;
+                      }
+                      return a / b;
+                  default:
+                      Console.WriteLine("Error Input");
+                      return 0;
+              }
+          }*/
     }
 }
